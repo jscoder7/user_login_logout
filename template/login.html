@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to techWorld</title>
+        <style>
+            body {
+                background-color: #ffeecc;
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+    
+            .login-container {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+                width: 300px;
+            }
+    
+            h1 {
+                color: #ff5733;
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+    
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: none;
+                border-bottom: 2px solid #ff5733;
+                background-color: transparent;
+                font-size: 1rem;
+                color: #333;
+            }
+    
+            input[type="text"]:focus,
+            input[type="password"]:focus {
+                outline: none;
+            }
+    
+            button {
+                background-color: #ff5733;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+    
+            button:hover {
+                background-color: #ff4422;
+            }
+    
+            p {
+                font-size: 0.8rem;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h1>Login</h1>
+            <form  method="post" action="/login">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </body>
+    </html>
+    
+    
+</body>
+</html>
